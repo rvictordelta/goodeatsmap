@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+        <title>Good eats in Chi</title>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script src="https://cdn-webgl.wrld3d.com/wrldjs/dist/latest/wrld.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+  </head>
+
+  <body style="height: 90%; width: 95%; outline: none;">
+    <div id="map" style=" height: 90%; width: 95%; outline: none;"></div>
+    <script>
+      var map = L.Wrld.map("map", "950c5dcc99137963f457ed57d692eff5", {
+        center: [41.884979, -87.624099],
+        zoom: 14
+      });
+      var marker = L.marker([41.884979, -87.624099], { riseOnHover: true }).addTo(map);
+    </script>
+  </body>
+<script>
+    $(window).on("resize", function () { $("#map").height($(window).height()-20); map.invalidateSize(); }).trigger("resize");
+    $(window).on("resize", function () { $("#map").width($(window).width()-20); map.invalidateSize(); }).trigger("resize");
+</script>
+</html>
