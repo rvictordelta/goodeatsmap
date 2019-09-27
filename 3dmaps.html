@@ -20,5 +20,18 @@
 <script>
     $(window).on("resize", function () { $("#map").height($(window).height()-20); map.invalidateSize(); }).trigger("resize");
     $(window).on("resize", function () { $("#map").width($(window).width()-20); map.invalidateSize(); }).trigger("resize");
+
+    var layerLookup = {};
+    layerLookup["layer1"] = new L.LayerGroup().addTo(map);
+
+    var markersArray = [
+        [41.884961, -87.6240  , 'layer1', 'place1'],
+        [41.885981, -87.623461, 'layer1', 'place2']
+    ]
+
+    for (var i = 0; i < markersArray.length; i++) {
+        marker = new L.marker([markersArray[i][0],markersArray[i][1]])
+        .bindPopup(markersArray[i][3]).addTo(layerLookup[markersArray[i][2]]);
+    };
 </script>
 </html>
