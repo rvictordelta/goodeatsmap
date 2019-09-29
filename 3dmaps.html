@@ -1,142 +1,142 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-        <title>Good eats in Chi</title>
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script src="https://cdn-webgl.wrld3d.com/wrldjs/dist/latest/wrld.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
-  </head>
+    <!DOCTYPE HTML>
+    <html>
+      <head>
+            <title>Good eats in Chi</title>
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="https://cdn-webgl.wrld3d.com/wrldjs/dist/latest/wrld.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+      </head>
 
-  <body style="height: 90%; width: 95%; outline: none;">
-    <div id="map" style=" height: 90%; width: 95%; outline: none;"></div>
+      <body style="height: 90%; width: 95%; outline: none;">
+        <div id="map" style=" height: 90%; width: 95%; outline: none;"></div>
+        <script>
+          var map = L.Wrld.map("map", "950c5dcc99137963f457ed57d692eff5", {
+            center: [41.884979, -87.624099],
+            zoom: 14
+          });
+    <!--      var marker = L.marker([41.884979, -87.624099], { riseOnHover: true }).addTo(map);-->
+        </script>
+      </body>
     <script>
-      var map = L.Wrld.map("map", "950c5dcc99137963f457ed57d692eff5", {
-        center: [41.884979, -87.624099],
-        zoom: 14
-      });
-<!--      var marker = L.marker([41.884979, -87.624099], { riseOnHover: true }).addTo(map);-->
+        $(window).on("resize", function () { $("#map").height($(window).height()-20); map.invalidateSize(); }).trigger("resize");
+        $(window).on("resize", function () { $("#map").width($(window).width()-20); map.invalidateSize(); }).trigger("resize");
+
+        var layerLookup = {};
+        layerLookup["layer1"] = new L.LayerGroup().addTo(map);
+        layerLookup["Bar"] = new L.LayerGroup().addTo(map);
+        layerLookup["Restaurant"] = new L.LayerGroup().addTo(map);
+        layerLookup["Shop"] = new L.LayerGroup().addTo(map);
+        layerLookup["Breakfast"] = new L.LayerGroup().addTo(map);
+        layerLookup["Late night food"] = new L.LayerGroup().addTo(map);
+        layerLookup["Entertainment"] = new L.LayerGroup().addTo(map);
+        layerLookup["Grocery"] = new L.LayerGroup().addTo(map);
+        layerLookup["Brewery"] = new L.LayerGroup().addTo(map);
+        layerLookup["Coffee"] = new L.LayerGroup().addTo(map);
+        layerLookup["Dessert"] = new L.LayerGroup().addTo(map);
+
+        var markersArray = [
+            [41.884961, -87.6240  , 'layer1', 'MPP'],
+            [41.940048, -87.653782, 'Restaurant', 'Cheesies'],
+            [41.940446, -87.654285, 'Bar', 'Trader Todds'],
+            [41.94061, -87.654259, 'Bar', 'Room 13'],
+            [41.939799, -87.653751, 'Breakfast', 'CBA'],
+            [41.941635, -87.654308, 'Bar', 'Sheffields bar'],
+            [41.94515, -87.654729, 'Late night food', 'Dimos pizza'],
+            [41.946559, -87.656215, 'Bar', 'Sluggers'],
+            [41.951163, -87.659836, 'Bar', 'Uncommon ground'],
+            [41.950788, -87.663937, 'Restaurant', 'Tango Sur'],
+            [41.949865, -87.663954, 'Entertainment', 'Music Box Theater'],
+            [41.942405, -87.663746, 'Bar', 'Southport Lanes'],
+            [41.941481, -87.664001, 'Bar', 'Schoolyard'],
+            [41.939667, -87.663674, 'Entertainment', 'Schubas'],
+            [41.945234, -87.67234, 'Grocery', 'Paulina Meat Market'],
+            [41.932849, -87.659295, 'Bar', 'Beermiscuous'],
+            [41.932185, -87.658495, 'Shop', 'Rotofugi'],
+            [41.932261, -87.658104, 'Bar', "Delilah's"],
+            [41.931649, -87.657654, 'Breakfast', 'Batter & Berries'],
+            [41.928464, -87.653123, 'Bar', 'Prost'],
+            [41.928683, -87.649023, 'Entertainment', 'Kingston Mines'],
+            [41.929188, -87.647518, 'Bar', 'Burwood Tap'],
+            [41.929481, -87.642942, 'Restaurant', 'Del Seoul'],
+            [41.93015, -87.643768, 'Late night food', 'Weiner Circle'],
+            [41.937211, -87.644137, 'Restaurant', 'Chilam Balam'],
+            [41.939327, -87.644248, 'Brewery', 'Dryhop brewers'],
+            [41.928633, -87.642556, 'Coffee', 'Collectivo Coffee'],
+            [41.926636, -87.641277, 'Bar', 'Galway Arms'],
+            [41.920752, -87.637439, 'Restaurant', 'Overgrinder'],
+            [41.921918, -87.648098, 'Breakfast', 'Toast'],
+            [41.921703, -87.649023, 'Restaurant', 'Athenian Room'],
+            [41.918957, -87.648692, 'Restaurant', 'Café Ba-Ba-Reeba'],
+            [41.918349, -87.652081, 'Dessert', "Annette's"],
+            [41.912758, -87.638605, 'Restaurant', 'Twin Anchors'],
+            [41.903836, -87.629526, 'Bar', 'The lodge'],
+            [41.903243, -87.629165, 'Bar', 'The Hangge-Uppe'],
+            [41.902191, -87.628494, 'Restaurant', 'Velvet Taco'],
+            [41.90131, -87.674645, 'Bar', 'Happy Village'],
+            [41.909232, -87.677308, 'Restaurant', 'Big Star'],
+            [41.910403, -87.676119, 'Restaurant', 'Piece Pizza'],
+            [41.915768, -87.676273, 'Bar', 'Lotties'],
+            [41.921198, -87.673731, 'Entertainment', 'Whirlyball'],
+            [41.92532, -87.701076, 'Bar', 'The Whistler'],
+            [41.925823, -87.701857, 'Restaurant', "Paulie Gee's"],
+            [41.925667, -87.702141, 'Bar', 'Estereo'],
+            [41.92719, -87.704132, 'Bar', 'The Owl'],
+            [41.924103, -87.699088, 'Bar', 'Slippery Slope'],
+            [41.917374, -87.698567, 'Restaurant', 'Dos Urban Café'],
+            [41.973964, -87.659576, 'Restaurant', 'Sun Wah BBQ'],
+            [41.973166, -87.659694, 'Restaurant', 'Tank Noodle'],
+            [41.895819, -87.673197, 'Restaurant', 'Arami'],
+            [41.857892, -87.657628, 'Restaurant', 'Duesks'],
+            [41.97582, -87.668472, 'Bar', 'Hopleaf'],
+            [41.908481, -87.674796, 'Breakfast', 'The Bongo Room'],
+            [41.879083, -87.647424, 'Restaurant', 'Greek Islands'],
+            [41.857919, -87.69302, 'Brewery', 'Lagunitas Brewing'],
+            [41.957835, -87.681482, 'Restaurant', 'Cho Sun Ok'],
+            [41.959263, -87.682297, 'Brewery', 'Half Acre Tap Room'],
+            [41.961291, -87.684287, 'Restaurant', 'El Asadero'],
+            [41.955476, -87.674351, 'Brewery', 'Begyle'],
+            [41.956232, -87.674376, 'Brewery', 'Dovetail'],
+            [41.979729, -87.681454, 'Brewery', 'Half Acre Brew House'],
+            [41.979779, -87.68063, 'Brewery', 'Spiteful taproom'],
+            [41.927135, -87.663636, 'Bar', "Bird's Nest"],
+            [41.908999, -87.650845, 'Restaurant', 'Pizzeria Bebu'],
+            [41.907941, -87.652079, 'Brewery', 'Off-Color Brewing Taproom'],
+            [41.908672, -87.649053, 'Bar', "Sully's"],
+            [41.910205, -87.648768, 'Restaurant', 'Burger Bar'],
+            [41.898391, -87.637386, 'Restaurant', "Big and Little's"],
+            [41.895985, -87.632506, 'Restaurant', 'Café Iberico'],
+            [41.799605, -87.588315, 'Restaurant', 'Valois Restaurant'],
+            [41.791364, -87.593745, 'Restaurant', 'Medici'],
+            [41.794894, -87.598611, 'Restaurant', 'Nella Pizza'],
+            [41.795162, -87.596894, 'Bar', "Jimmy's Woodlawn Tap"],
+            [41.788015, -87.595339, 'Bar', 'The Pub'],
+            [41.853321, -87.635055, 'Restaurant', 'Lao Sze Chuan'],
+            [41.853383, -87.634949, 'Restaurant', 'MingHin'],
+            [41.854064, -87.633831, 'Restaurant', 'Joy Yee'],
+            [41.893363, -87.63135, 'Restaurant', 'Portillos'],
+            [41.907011, -87.672002, 'Restaurant', 'Oiistar Ramen'],
+            [41.878031, -87.632303, 'Restaurant', 'Ceres Café'],
+            [41.886658, -87.649437, 'Restaurant', "Gus' World Famous Fried Chicken"],
+            [41.920062, -87.692941, 'Brewery', 'Pilot Project'],
+            [41.920236, -87.693097, 'Restaurant', 'Taqueria Los Comales'],
+            [41.917703, -87.698877, 'Brewery', 'Middlebrow'],
+            [41.926522, -87.697574, 'Restaurant', 'Quiote'],
+            [41.931258, -87.711162, 'Brewery', 'Hopewell Brewing'],
+            [41.930098, -87.707216, 'Restaurant', 'Longman and Eagle'],
+            [41.939494, -87.700406, 'Restaurant', "Kuma's Corner"],
+            [41.917348, -87.707497, 'Restaurant', 'Giant'],
+            [41.919017, -87.697137, 'Restaurant', 'Bang Bang Pie and Biscuits'],
+            [41.919562, -87.697126, 'Restaurant', 'Lonesome Rose'],
+            [41.900393, -87.686748, 'Entertainment', 'The Empty Bottle'],
+            [41.936081, -87.644353, 'Restaurant', 'Crisp'],
+            [41.93526, -87.646745, 'Bar', 'Duke of Perth'],
+            [41.930775, -87.691138, 'Brewery', 'Maplewood Brewery'],
+
+        ]
+
+        for (var i = 0; i < markersArray.length; i++) {
+            marker = new L.marker([markersArray[i][0],markersArray[i][1]])
+            .bindPopup(markersArray[i][3]).addTo(layerLookup[markersArray[i][2]]);
+        };
     </script>
-  </body>
-<script>
-    $(window).on("resize", function () { $("#map").height($(window).height()-20); map.invalidateSize(); }).trigger("resize");
-    $(window).on("resize", function () { $("#map").width($(window).width()-20); map.invalidateSize(); }).trigger("resize");
-
-    var layerLookup = {};
-    layerLookup["layer1"] = new L.LayerGroup().addTo(map);
-    layerLookup["Bar"] = new L.LayerGroup().addTo(map);
-    layerLookup["Restaurant"] = new L.LayerGroup().addTo(map);
-    layerLookup["Shop"] = new L.LayerGroup().addTo(map);
-    layerLookup["Breakfast"] = new L.LayerGroup().addTo(map);
-    layerLookup["Late night food"] = new L.LayerGroup().addTo(map);
-    layerLookup["Entertainment"] = new L.LayerGroup().addTo(map);
-    layerLookup["Grocery"] = new L.LayerGroup().addTo(map);
-    layerLookup["Brewery"] = new L.LayerGroup().addTo(map);
-    layerLookup["Coffee"] = new L.LayerGroup().addTo(map);
-    layerLookup["Dessert"] = new L.LayerGroup().addTo(map);
-
-    var markersArray = [
-        [41.884961, -87.6240  , 'layer1', 'MPP'],
-        [41.940048, -87.653782, 'Restaurant', 'Cheesies'],
-        [41.940446, -87.654285, 'Bar', 'Trader Todds'],
-        [41.94061, -87.654259, 'Bar', 'Room 13'],
-        [41.939799, -87.653751, 'Breakfast', 'CBA'],
-        [41.941635, -87.654308, 'Bar', 'Sheffields bar'],
-        [41.94515, -87.654729, 'Late night food', 'Dimos pizza'],
-        [41.946559, -87.656215, 'Bar', 'Sluggers'],
-        [41.951163, -87.659836, 'Bar', 'Uncommon ground'],
-        [41.950788, -87.663937, 'Restaurant', 'Tango Sur'],
-        [41.949865, -87.663954, 'Entertainment', 'Music Box Theater'],
-        [41.942405, -87.663746, 'Bar', 'Southport Lanes'],
-        [41.941481, -87.664001, 'Bar', 'Schoolyard'],
-        [41.939667, -87.663674, 'Entertainment', 'Schubas'],
-        [41.945234, -87.67234, 'Grocery', 'Paulina Meat Market'],
-        [41.932849, -87.659295, 'Bar', 'Beermiscuous'],
-        [41.932185, -87.658495, 'Shop', 'Rotofugi'],
-        [41.932261, -87.658104, 'Bar', "Delilah's"],
-        [41.931649, -87.657654, 'Breakfast', 'Batter & Berries'],
-        [41.928464, -87.653123, 'Bar', 'Prost'],
-        [41.928683, -87.649023, 'Entertainment', 'Kingston Mines'],
-        [41.929188, -87.647518, 'Bar', 'Burwood Tap'],
-        [41.929481, -87.642942, 'Restaurant', 'Del Seoul'],
-        [41.93015, -87.643768, 'Late night food', 'Weiner Circle'],
-        [41.937211, -87.644137, 'Restaurant', 'Chilam Balam'],
-        [41.939327, -87.644248, 'Brewery', 'Dryhop brewers'],
-        [41.928633, -87.642556, 'Coffee', 'Collectivo Coffee'],
-        [41.926636, -87.641277, 'Bar', 'Galway Arms'],
-        [41.920752, -87.637439, 'Restaurant', 'Overgrinder'],
-        [41.921918, -87.648098, 'Breakfast', 'Toast'],
-        [41.921703, -87.649023, 'Restaurant', 'Athenian Room'],
-        [41.918957, -87.648692, 'Restaurant', 'Café Ba-Ba-Reeba'],
-        [41.918349, -87.652081, 'Dessert', "Annette's"],
-        [41.912758, -87.638605, 'Restaurant', 'Twin Anchors'],
-        [41.903836, -87.629526, 'Bar', 'The lodge'],
-        [41.903243, -87.629165, 'Bar', 'The Hangge-Uppe'],
-        [41.902191, -87.628494, 'Restaurant', 'Velvet Taco'],
-        [41.90131, -87.674645, 'Bar', 'Happy Village'],
-        [41.909232, -87.677308, 'Restaurant', 'Big Star'],
-        [41.910403, -87.676119, 'Restaurant', 'Piece Pizza'],
-        [41.915768, -87.676273, 'Bar', 'Lotties'],
-        [41.921198, -87.673731, 'Entertainment', 'Whirlyball'],
-        [41.92532, -87.701076, 'Bar', 'The Whistler'],
-        [41.925823, -87.701857, 'Restaurant', "Paulie Gee's"],
-        [41.925667, -87.702141, 'Bar', 'Estereo'],
-        [41.92719, -87.704132, 'Bar', 'The Owl'],
-        [41.924103, -87.699088, 'Bar', 'Slippery Slope'],
-        [41.917374, -87.698567, 'Restaurant', 'Dos Urban Café'],
-        [41.973964, -87.659576, 'Restaurant', 'Sun Wah BBQ'],
-        [41.973166, -87.659694, 'Restaurant', 'Tank Noodle'],
-        [41.895819, -87.673197, 'Restaurant', 'Arami'],
-        [41.857892, -87.657628, 'Restaurant', 'Duesks'],
-        [41.97582, -87.668472, 'Bar', 'Hopleaf'],
-        [41.908481, -87.674796, 'Breakfast', 'The Bongo Room'],
-        [41.879083, -87.647424, 'Restaurant', 'Greek Islands'],
-        [41.857919, -87.69302, 'Brewery', 'Lagunitas Brewing'],
-        [41.957835, -87.681482, 'Restaurant', 'Cho Sun Ok'],
-        [41.959263, -87.682297, 'Brewery', 'Half Acre Tap Room'],
-        [41.961291, -87.684287, 'Restaurant', 'El Asadero'],
-        [41.955476, -87.674351, 'Brewery', 'Begyle'],
-        [41.956232, -87.674376, 'Brewery', 'Dovetail'],
-        [41.979729, -87.681454, 'Brewery', 'Half Acre Brew House'],
-        [41.979779, -87.68063, 'Brewery', 'Spiteful taproom'],
-        [41.927135, -87.663636, 'Bar', "Bird's Nest"],
-        [41.908999, -87.650845, 'Restaurant', 'Pizzeria Bebu'],
-        [41.907941, -87.652079, 'Brewery', 'Off-Color Brewing Taproom'],
-        [41.908672, -87.649053, 'Bar', "Sully's"],
-        [41.910205, -87.648768, 'Restaurant', 'Burger Bar'],
-        [41.898391, -87.637386, 'Restaurant', "Big and Little's"],
-        [41.895985, -87.632506, 'Restaurant', 'Café Iberico'],
-        [41.799605, -87.588315, 'Restaurant', 'Valois Restaurant'],
-        [41.791364, -87.593745, 'Restaurant', 'Medici'],
-        [41.794894, -87.598611, 'Restaurant', 'Nella Pizza'],
-        [41.795162, -87.596894, 'Bar', "Jimmy's Woodlawn Tap"],
-        [41.788015, -87.595339, 'Bar', 'The Pub'],
-        [41.853321, -87.635055, 'Restaurant', 'Lao Sze Chuan'],
-        [41.853383, -87.634949, 'Restaurant', 'MingHin'],
-        [41.854064, -87.633831, 'Restaurant', 'Joy Yee'],
-        [41.893363, -87.63135, 'Restaurant', 'Portillos'],
-        [41.907011, -87.672002, 'Restaurant', 'Oiistar Ramen'],
-        [41.878031, -87.632303, 'Restaurant', 'Ceres Café'],
-        [41.886658, -87.649437, 'Restaurant', "Gus' World Famous Fried Chicken"],
-        [41.920062, -87.692941, 'Brewery', 'Pilot Project'],
-        [41.920236, -87.693097, 'Restaurant', 'Taqueria Los Comales'],
-        [41.917703, -87.698877, 'Brewery', 'Middlebrow'],
-        [41.926522, -87.697574, 'Restaurant', 'Quiote'],
-        [41.931258, -87.711162, 'Brewery', 'Hopewell Brewing'],
-        [41.930098, -87.707216, 'Restaurant', 'Longman and Eagle'],
-        [41.939494, -87.700406, 'Restaurant', "Kuma's Corner"],
-        [41.917348, -87.707497, 'Restaurant', 'Giant'],
-        [41.919017, -87.697137, 'Restaurant', 'Bang Bang Pie and Biscuits'],
-        [41.919562, -87.697126, 'Restaurant', 'Lonesome Rose'],
-        [41.900393, -87.686748, 'Entertainment', 'The Empty Bottle'],
-        [41.936081, -87.644353, 'Restaurant', 'Crisp'],
-        [41.93526, -87.646745, 'Bar', 'Duke of Perth'],
-        [41.930775, -87.691138, 'Brewery', 'Maplewood Brewery'],
-
-    ]
-
-    for (var i = 0; i < markersArray.length; i++) {
-        marker = new L.marker([markersArray[i][0],markersArray[i][1]])
-        .bindPopup(markersArray[i][3]).addTo(layerLookup[markersArray[i][2]]);
-    };
-</script>
-</html>
+    </html>
