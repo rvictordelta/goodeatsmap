@@ -178,8 +178,22 @@
             popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
         });
 
+        var color_type_lookup = [
+            ["Bar",Icon_red],
+            ["Restaurant",Icon_blue],
+            ["Brewery",Icon_green],
+            ["Breakfast",Icon_yell],
+            ["Brunch",Icon_yell]
+            ]
+
+        //assign marker colors to each point in markersArray acrding to color_type_lookup
         for (var i = 0; i < markersArray.length; i++) {
-            marker = new L.marker([markersArray[i][0],markersArray[i][1]], {icon: Icon_red})
+            var icn = Icon_purp
+            for (var j = 0; j < color_type_lookup.length; j++){
+                if (color_type_lookup[j][0] == markersArray[i][2])
+                    {icn = color_type_lookup[j][1]}
+                };
+            marker = new L.marker([markersArray[i][0],markersArray[i][1]], {icon: icn})
             .bindPopup(markersArray[i][3]).addTo(layerLookup[markersArray[i][2]]);
         };
 
