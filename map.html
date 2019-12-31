@@ -30,23 +30,23 @@
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
             <ul role="tablist">
-                <li><a role="tab"><i class="fas fa-utensils"></i></a></li>
-                <li><a role="tab"><i class="fas fa-glass-cheers"></i></a></li>
-                <li><a role="tab"><i class="fas fa-beer"></i></a></li>
-                <li><a role="tab"><i class="fas fa-bacon"></i></a></li>
-                <li><a role="tab"><i class="fab fa-diaspora"></i></a></li>
-                <li class="disabled"><a role="tab"><i class="fas fa-minus"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-one"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-two"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-three"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-four"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-five"></i></a></li>
-                <li><a role="tab"><i class="fas fa-dice-six"></i></a></li>
+                <li onclick="markers_toggle('Restaurant')"><a role="tab"><i class="fas fa-utensils"></i></a></li>
+                <li onclick="markers_toggle('Bar')"><a role="tab"><i class="fas fa-glass-cheers"></i></a></li>
+                <li onclick="markers_toggle('Brewery')"><a role="tab"><i class="fas fa-beer"></i></a></li>
+                <li onclick="markers_toggle('Breakfast')"><a role="tab"><i class="fas fa-bacon"></i></a></li>
+                <li onclick="markers_toggle('Shop')"><a role="tab"><i class="fab fa-diaspora"></i></a></li>
+<!--                <li class="disabled"><a role="tab"><i class="fas fa-minus"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-one"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-two"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-three"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-four"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-five"></i></a></li>-->
+<!--                <li><a role="tab"><i class="fas fa-dice-six"></i></a></li>-->
             </ul>
 
             <ul role="tablist">
-                <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
-                <li><a href="#settings" role="tab"><i class="fas fa-gear"></i></a></li>
+                <li><a href="mailto:rvanduse@chicagobooth.edu" role="tab"><i class="fa fa-envelope"></i></a></li>
+<!--                <li><a href="#settings" role="tab"><i class="fas fa-gear"></i></a></li>-->
             </ul>
         </div>
 
@@ -304,7 +304,67 @@
 
         var sidebar = L.control.sidebar('sidebar').addTo(mymap);
 
-<!--function markers_enable-->
+var first_view = true
+
+function markers_toggle(layer_name) {
+    if (first_view) {
+        first_view = false;
+        markers_disable("ALL");
+        markers_enable(layer_name);
+        return ;
+        };
+    if (mymap.hasLayer(layerLookup[layer_name])) {
+        markers_disable(layer_name)} else {
+        markers_enable(layer_name)};
+    };
+
+function markers_disable(layer_name){
+    if (layer_name == "Breakfast") {
+        mymap.removeLayer(layerLookup["Breakfast"]);
+        mymap.removeLayer(layerLookup["Brunch"])
+        return ;
+        };
+    if (layer_name == "ALL") {
+        Object.keys(layerLookup).forEach(key=>{
+            mymap.removeLayer(layerLookup[key])
+            });
+        return ;
+        };
+    if (layer_name == "Shop") {
+        mymap.removeLayer(layerLookup["Shop"]);
+        mymap.removeLayer(layerLookup["Late night food"]);
+        mymap.removeLayer(layerLookup["Entertainment"]);
+        mymap.removeLayer(layerLookup["Grocery"]);
+        mymap.removeLayer(layerLookup["Coffee"]);
+        mymap.removeLayer(layerLookup["Dessert"]);
+        return ;
+        };
+    mymap.removeLayer(layerLookup[layer_name])
+    };
+
+function markers_enable(layer_name){
+    if (layer_name == "Breakfast") {
+        mymap.addLayer(layerLookup["Breakfast"]);
+        mymap.addLayer(layerLookup["Brunch"])
+        return ;
+        };
+    if (layer_name == "ALL") {
+        Object.keys(layerLookup).forEach(key=>{
+            mymap.addLayer(layerLookup[key])
+            });
+        return ;
+        };
+    if (layer_name == "Shop") {
+        mymap.addLayer(layerLookup["Shop"]);
+        mymap.addLayer(layerLookup["Late night food"]);
+        mymap.addLayer(layerLookup["Entertainment"]);
+        mymap.addLayer(layerLookup["Grocery"]);
+        mymap.addLayer(layerLookup["Coffee"]);
+        mymap.addLayer(layerLookup["Dessert"]);
+        return ;
+        };
+    mymap.addLayer(layerLookup[layer_name])
+    };
 
 </script>
 </html>
