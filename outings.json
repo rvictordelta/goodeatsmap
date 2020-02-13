@@ -1,0 +1,22 @@
+{
+   "outings": [
+      {"name": "Refined Beer and Pizza Outing", "id": 1,
+       "adjectives": ["Casual", "Cheap", "Fun"],
+       "display_markers": ["Off-Color Brewing Taproom", "Pizzeria Bebu"],
+       "legs": [
+         {"name": "Mousetrap taproom",
+          "blurb": "Apex Predator is their flagship brew, but don't leave without trying some of their funkier stuff",
+          "trans_msg": "Use the pizza phone inside the bar to order takeout from nearby Pizzeria Bebu"
+         },
+         {"name": "Pizzeria Bebu",
+          "blurb": "Delicious thin crust pizza.  The Risk Manager and Ode to Rubirosa are my favs",
+          "trans_msg": "Walk across the street, pickup the pizza, bring it back to the Mousetrap, chow down"
+         },
+         {"name": "iO Theater",
+          "blurb": "The bigger name stuff sells out in advance, but there's often seats for $5 sketch comedy last minute.",
+          "trans_msg": null
+         }
+       ]
+      }
+   ]
+}
