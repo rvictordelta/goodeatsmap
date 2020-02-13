@@ -1,0 +1,556 @@
+{
+  "places": {
+    "Cheesies": {
+      "lat": 41.940048,
+      "lon": -87.653782,
+      "type": "Restaurant",
+      "des": "Grilled cheese joint.  The perfect late night food.  Greasy as can be. "
+    },
+    "Trader Todds": {
+      "lat": 41.940446,
+      "lon": -87.654285,
+      "type": "Bar",
+      "des": "Tiki theme karoke bar.  It's good if you like this sort of thing. "
+    },
+    "Room 13": {
+      "lat": 41.94061,
+      "lon": -87.654259,
+      "type": "Bar",
+      "des": "Speakeasy themed bar.  Hole in the wall.  Often has a live musical act. Amazing cocktails.  Need a reservation / referral.  Email luke@oldchicagoinn.com ahead of time if you want to drop by "
+    },
+    "CBA": {
+      "lat": 41.939799,
+      "lon": -87.653751,
+      "type": "Breakfast",
+      "des": "Bagel sandwiches to cure even the most persistent hangover. "
+    },
+    "Sheffields bar": {
+      "lat": 41.941635,
+      "lon": -87.654308,
+      "type": "Bar",
+      "des": "Just a great neighborhood bar.  Excellent beer selection "
+    },
+    "Dimos pizza": {
+      "lat": 41.94515,
+      "lon": -87.654729,
+      "type": "Late night food",
+      "des": "Pizza joint with creative toppings.  Chicken parm is my fav "
+    },
+    "Sluggers": {
+      "lat": 41.946559,
+      "lon": -87.656215,
+      "type": "Bar",
+      "des": "Wrigleyville classic "
+    },
+    "Uncommon ground": {
+      "lat": 41.951163,
+      "lon": -87.659836,
+      "type": "Bar",
+      "des": "Best lunch in Wrigleyville "
+    },
+    "Tango Sur": {
+      "lat": 41.950788,
+      "lon": -87.663937,
+      "type": "Restaurant",
+      "des": "Argentinean steak house.  Incredible value.  BYOB.  Great for a date! "
+    },
+    "Music Box Theater": {
+      "lat": 41.949865,
+      "lon": -87.663954,
+      "type": "Entertainment",
+      "des": "Films that aren't quite the mainstream in a cool setting.  Great for a date! "
+    },
+    "Southport Lanes": {
+      "lat": 41.942405,
+      "lon": -87.663746,
+      "type": "Bar",
+      "des": "Bar with bowling "
+    },
+    "Schoolyard": {
+      "lat": 41.941481,
+      "lon": -87.664001,
+      "type": "Bar",
+      "des": "Dive bar with a good patio. "
+    },
+    "Schubas": {
+      "lat": 41.939667,
+      "lon": -87.663674,
+      "type": "Entertainment",
+      "des": "Cheap live music, often sells out, check their calendar regularly! "
+    },
+    "Paulina Meat Market": {
+      "lat": 41.945234,
+      "lon": -87.67234,
+      "type": "Grocery",
+      "des": "Favorite butcher "
+    },
+    "Beermiscuous": {
+      "lat": 41.932849,
+      "lon": -87.659295,
+      "type": "Bar",
+      "des": "Beer bar.  Incredible selection.  It's almost a coffee shop, but with beer?  Place to hang, bring a board game or cards. "
+    },
+    "Rotofugi": {
+      "lat": 41.932185,
+      "lon": -87.658495,
+      "type": "Shop",
+      "des": "Off the wall shop. Fun to wander around here while you're waiting for your table at Batter and Berries. "
+    },
+    "Delilah's": {
+      "lat": 41.932261,
+      "lon": -87.658104,
+      "type": "Bar",
+      "des": "Metal whiskey bar.   "
+    },
+    "Batter & Berries": {
+      "lat": 41.931649,
+      "lon": -87.657654,
+      "type": "Breakfast",
+      "des": "Great brunch, go for chicken & waffles and french toast flight "
+    },
+    "Prost": {
+      "lat": 41.928464,
+      "lon": -87.653123,
+      "type": "Bar",
+      "des": "German style beer hall.  They sell boots.  Fun place to start a night "
+    },
+    "Kingston Mines": {
+      "lat": 41.928683,
+      "lon": -87.649023,
+      "type": "Entertainment",
+      "des": "Legendary blues temple. Student discount is great "
+    },
+    "Burwood Tap": {
+      "lat": 41.929188,
+      "lon": -87.647518,
+      "type": "Bar",
+      "des": "Quintessential neighborhood bar.  My favorite in the city "
+    },
+    "Del Seoul": {
+      "lat": 41.929481,
+      "lon": -87.642942,
+      "type": "Restaurant",
+      "des": "Korean Mexican fusion.  Shrimp tacos are to die for "
+    },
+    "Weiner Circle": {
+      "lat": 41.93015,
+      "lon": -87.643768,
+      "type": "Late night food",
+      "des": "Famous for how terrible the staff treats you.  (In)decent milkshakes. "
+    },
+    "Chilam Balam": {
+      "lat": 41.937211,
+      "lon": -87.644137,
+      "type": "Restaurant",
+      "des": "Mexican small plates.  A little pricey, but so so good. "
+    },
+    "Dryhop brewers": {
+      "lat": 41.939327,
+      "lon": -87.644248,
+      "type": "Brewery",
+      "des": "Great brews and good food to boot. "
+    },
+    "Collectivo Coffee": {
+      "lat": 41.928633,
+      "lon": -87.642556,
+      "type": "Brunch",
+      "des": "Favorite spot for breakfast / casual brunch.  Breakfast burritos are excellent.  Used to like to do work here. "
+    },
+    "Galway Arms": {
+      "lat": 41.926636,
+      "lon": -87.641277,
+      "type": "Bar",
+      "des": "Classic pub.  Great for soccer games. "
+    },
+    "Ovengrinder Pizza Co": {
+      "lat": 41.920752,
+      "lon": -87.637439,
+      "type": "Restaurant",
+      "des": "Pizza joint.  Terribly touristy, waittimes are extreme, but pretty great; you should probably go once. "
+    },
+    "Toast": {
+      "lat": 41.921918,
+      "lon": -87.648098,
+      "type": "Breakfast",
+      "des": "Solid brunch spot. "
+    },
+    "Athenian Room": {
+      "lat": 41.921703,
+      "lon": -87.649023,
+      "type": "Restaurant",
+      "des": "Casual greek.  Been around for decades, my parents used to eat here when they were in their 20s. "
+    },
+    "Café Ba-Ba-Reeba": {
+      "lat": 41.918957,
+      "lon": -87.648692,
+      "type": "Restaurant",
+      "des": "Spanish tapas.  Good date spot.  Lettuce-entertain-you "
+    },
+    "Annette's": {
+      "lat": 41.918349,
+      "lon": -87.652081,
+      "type": "Dessert",
+      "des": "Old school ice cream joint. "
+    },
+    "Twin Anchors": {
+      "lat": 41.912758,
+      "lon": -87.638605,
+      "type": "Restaurant",
+      "des": "Rib joint.  Get em with the zesty sauce.  Been around for decades, my parents used to eat here when they were in their 20s. "
+    },
+    "The Lodge": {
+      "lat": 41.903836,
+      "lon": -87.629526,
+      "type": "Bar",
+      "des": "Great dive bar. "
+    },
+    "The Hangge-Uppe": {
+      "lat": 41.903243,
+      "lon": -87.629165,
+      "type": "Bar",
+      "des": "The Hangge-Uppe.  No one tries to go here, but then they do "
+    },
+    "Velvet Taco": {
+      "lat": 41.902191,
+      "lon": -87.628494,
+      "type": "Restaurant",
+      "des": "Great tacos "
+    },
+    "Happy Village": {
+      "lat": 41.90131,
+      "lon": -87.674645,
+      "type": "Bar",
+      "des": "Dive bar with cheap cocktails that you can bring food to.  Great vibes and they have pool tables "
+    },
+    "Big Star": {
+      "lat": 41.909232,
+      "lon": -87.677308,
+      "type": "Restaurant",
+      "des": "Taco joint in Wicker park.  Great patio "
+    },
+    "Piece Pizza": {
+      "lat": 41.910403,
+      "lon": -87.676119,
+      "type": "Restaurant",
+      "des": "Local thin crust pizza joint.  Live band karoke occassionally "
+    },
+    "Lotties": {
+      "lat": 41.915768,
+      "lon": -87.676273,
+      "type": "Bar",
+      "des": "Great bar!!!!!! "
+    },
+    "Whirlyball": {
+      "lat": 41.921198,
+      "lon": -87.673731,
+      "type": "Entertainment",
+      "des": "Bumper cars combined with lacrosse.  You should do this at least once before you leave Chicago "
+    },
+    "The Whistler": {
+      "lat": 41.92532,
+      "lon": -87.701076,
+      "type": "Bar",
+      "des": "Cocktails in bucktown "
+    },
+    "Paulie Gee's": {
+      "lat": 41.925823,
+      "lon": -87.701857,
+      "type": "Restaurant",
+      "des": "NYC pizza that's pretty damn good.  Nice place to start a bar crawl in Logan Square. "
+    },
+    "Estereo": {
+      "lat": 41.925667,
+      "lon": -87.702141,
+      "type": "Bar",
+      "des": "Lively bar in Logan Square. "
+    },
+    "The Owl": {
+      "lat": 41.92719,
+      "lon": -87.704132,
+      "type": "Bar",
+      "des": "I never feel like I'm cool enough to be here, but I typically enjoy myself.  Cocktail bar. "
+    },
+    "Slippery Slope": {
+      "lat": 41.924103,
+      "lon": -87.699088,
+      "type": "Bar",
+      "des": "Good bar in Logan Square. "
+    },
+    "Dos Urban Café": {
+      "lat": 41.917374,
+      "lon": -87.698567,
+      "type": "Restaurant",
+      "des": "Upscale mexican food that is quite tasty. "
+    },
+    "Sun Wah BBQ": {
+      "lat": 41.973964,
+      "lon": -87.659576,
+      "type": "Restaurant",
+      "des": "Go for the peking duck "
+    },
+    "Arami": {
+      "lat": 41.895819,
+      "lon": -87.673197,
+      "type": "Restaurant",
+      "des": "My favorite sushi spot in the city "
+    },
+    "Duesks": {
+      "lat": 41.857892,
+      "lon": -87.657628,
+      "type": "Restaurant",
+      "des": "High end tavern in Pilsen. "
+    },
+    "Hopleaf": {
+      "lat": 41.97582,
+      "lon": -87.668472,
+      "type": "Bar",
+      "des": "Andersonville mainstay.  Great beer selection and excellent mussels. "
+    },
+    "The Bongo Room": {
+      "lat": 41.908481,
+      "lon": -87.674796,
+      "type": "Breakfast",
+      "des": "Heavy, decadent brunch "
+    },
+    "Greek Islands": {
+      "lat": 41.879083,
+      "lon": -87.647424,
+      "type": "Restaurant",
+      "des": "Flaming cheese!!  Touristy, but you should go once "
+    },
+    "Lagunitas Brewing": {
+      "lat": 41.857919,
+      "lon": -87.69302,
+      "type": "Brewery",
+      "des": "Great tap room and a cool tour "
+    },
+    "Cho Sun Ok": {
+      "lat": 41.957835,
+      "lon": -87.681482,
+      "type": "Restaurant",
+      "des": "Korean BBQ.  Delicious.  Long lines.  Cheap.  The staff will probably be rude to you, but it's worth it.  If you have a Korean friend, have them take you here.  BYOB, get beer from Half Acre up the street. "
+    },
+    "Half Acre Tap Room": {
+      "lat": 41.959263,
+      "lon": -87.682297,
+      "type": "Brewery",
+      "des": "Chicago brewer. Love their stuff!  Awesome tour on Saturday mornings… "
+    },
+    "El Asadero": {
+      "lat": 41.961291,
+      "lon": -87.684287,
+      "type": "Restaurant",
+      "des": "Steak burritos are dopeee.  Old school and unassuming, but quite good. "
+    },
+    "Begyle": {
+      "lat": 41.955476,
+      "lon": -87.674351,
+      "type": "Brewery",
+      "des": "Solid brewery, worth a visit "
+    },
+    "Dovetail Brewery": {
+      "lat": 41.956232,
+      "lon": -87.674376,
+      "type": "Brewery",
+      "des": " Good brews, good vibes "
+    },
+    "Half Acre Brew House": {
+      "lat": 41.979729,
+      "lon": -87.681454,
+      "type": "Brewery",
+      "des": "Quieter than their Lincoln taproom, sometimes has small batch stuff unavailable elsewhere "
+    },
+    "Spiteful taproom": {
+      "lat": 41.979779,
+      "lon": -87.68063,
+      "type": "Brewery",
+      "des": "Fun to go here after Half Acre "
+    },
+    "Bird's Nest": {
+      "lat": 41.927135,
+      "lon": -87.663636,
+      "type": "Bar",
+      "des": "Great wings "
+    },
+    "Pizzeria Bebu": {
+      "lat": 41.908999,
+      "lon": -87.650845,
+      "type": "Restaurant",
+      "des": "Dude this place is so good.  Thin crust pizza.  Call and order take out, pick it up and take it over to the mousetrap across the street. "
+    },
+    "Off-Color Brewing Taproom": {
+      "lat": 41.907941,
+      "lon": -87.652079,
+      "type": "Brewery",
+      "des": "BYO-food tap room. Love it! "
+    },
+    "Sully's": {
+      "lat": 41.908672,
+      "lon": -87.649053,
+      "type": "Bar",
+      "des": "Best wings in the city!!  But it's a dive bar. "
+    },
+    "Big and Little's": {
+      "lat": 41.898391,
+      "lon": -87.637386,
+      "type": "Restaurant",
+      "des": "Casual spot for tacos and po'boys. "
+    },
+    "Valois Restaurant": {
+      "lat": 41.799605,
+      "lon": -87.588315,
+      "type": "Restaurant",
+      "des": "Old school cafeteria style restaurant.  Casual.  Apparently an Obama fav? "
+    },
+    "Medici": {
+      "lat": 41.791364,
+      "lon": -87.593745,
+      "type": "Restaurant",
+      "des": "Hyde park pizza spot. Obama favorite? "
+    },
+    "Nella Pizza": {
+      "lat": 41.794894,
+      "lon": -87.598611,
+      "type": "Restaurant",
+      "des": "On-campus italian / pizza spot.  Super good! "
+    },
+    "Jimmy's Woodlawn Tap": {
+      "lat": 41.795162,
+      "lon": -87.596894,
+      "type": "Bar",
+      "des": "Dive bar near campus. "
+    },
+    "The Pub": {
+      "lat": 41.788015,
+      "lon": -87.595339,
+      "type": "Bar",
+      "des": "Dive bar on campus. "
+    },
+    "Lao Sze Chuan": {
+      "lat": 41.853321,
+      "lon": -87.635055,
+      "type": "Restaurant",
+      "des": "Order the eggplant, it's dope. "
+    },
+    "MingHin": {
+      "lat": 41.853383,
+      "lon": -87.634949,
+      "type": "Restaurant",
+      "des": "Great for dim sum.  There's also one like right next to our Marianos, but I think this one is better. "
+    },
+    "Portillos": {
+      "lat": 41.893363,
+      "lon": -87.63135,
+      "type": "Restaurant",
+      "des": "Chicagoland mainstay.  America at its best and worst.  You should go once before you leave. "
+    },
+    "Oiistar Ramen": {
+      "lat": 41.907011,
+      "lon": -87.672002,
+      "type": "Restaurant",
+      "des": "Favorite ramen place in the city. "
+    },
+    "Ceres Café": {
+      "lat": 41.878031,
+      "lon": -87.632303,
+      "type": "Restaurant",
+      "des": "Their mixed drinks are…  extreme.  This is where traders would go after the close when the pits were a thing.   "
+    },
+    "Gus' World Famous Fried Chicken": {
+      "lat": 41.886658,
+      "lon": -87.649437,
+      "type": "Restaurant",
+      "des": "I worry this place gets overlooked amongst its flashier Fulton nieghbors.  It’s so good. "
+    },
+    "Pilot Project": {
+      "lat": 41.920062,
+      "lon": -87.692941,
+      "type": "Brewery",
+      "des": "Brewery incubator with a great patio. "
+    },
+    "Taqueria Los Comales": {
+      "lat": 41.920236,
+      "lon": -87.693097,
+      "type": "Restaurant",
+      "des": "For me, its chief appeal is that it's next to pilot project.  Tasty, cheap tacos! "
+    },
+    "Middlebrow": {
+      "lat": 41.917703,
+      "lon": -87.698877,
+      "type": "Brewery",
+      "des": "Hip brewery.  It's not highbrow, it's not lowbrow, it's…. "
+    },
+    "Quiote": {
+      "lat": 41.926522,
+      "lon": -87.697574,
+      "type": "Restaurant",
+      "des": "Upscale mexican food that is quite tasty. "
+    },
+    "Hopewell Brewing": {
+      "lat": 41.931258,
+      "lon": -87.711162,
+      "type": "Brewery",
+      "des": "Great taproom "
+    },
+    "Longman and Eagle": {
+      "lat": 41.930098,
+      "lon": -87.707216,
+      "type": "Restaurant",
+      "des": "Weird food, but it's super good. "
+    },
+    "Kuma's Corner": {
+      "lat": 41.939494,
+      "lon": -87.700406,
+      "type": "Restaurant",
+      "des": "Metal burger bar. "
+    },
+    "Giant": {
+      "lat": 41.917348,
+      "lon": -87.707497,
+      "type": "Restaurant",
+      "des": "Awesome american bistro.  Get a res "
+    },
+    "Bang Bang Pie and Biscuits": {
+      "lat": 41.919017,
+      "lon": -87.697137,
+      "type": "Restaurant",
+      "des": "They make pie and biscuits that are really good. "
+    },
+    "Lonesome Rose": {
+      "lat": 41.919562,
+      "lon": -87.697126,
+      "type": "Restaurant",
+      "des": "Their smothered burritos are amazing "
+    },
+    "The Empty Bottle": {
+      "lat": 41.900393,
+      "lon": -87.686748,
+      "type": "Entertainment",
+      "des": "Great place to dance "
+    },
+    "Crisp": {
+      "lat": 41.936081,
+      "lon": -87.644353,
+      "type": "Restaurant",
+      "des": "Excellent chicken wings "
+    },
+    "Duke of Perth": {
+      "lat": 41.93526,
+      "lon": -87.646745,
+      "type": "Bar",
+      "des": "Classic chicago pub. "
+    },
+    "Maplewood Brewery": {
+      "lat": 41.930775,
+      "lon": -87.691138,
+      "type": "Brewery",
+      "des": "Good hazy IPAs "
+    },
+    "5 Rabanitos": {
+      "lat": 41.857852,
+      "lon": -87.67082,
+      "type": "Restaurant",
+      "des": "Tasty mexican joint "
+    }
+  }
+}
